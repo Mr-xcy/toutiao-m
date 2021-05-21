@@ -14,4 +14,18 @@ module.exports = {
         propList: ['*'],
       },
     },
-  };
+};
+
+// Vant 建议设置为 37.5  因为 Vant 是基于逻辑像素 375 写的，所以如果你设置为 75 的话，Vant 的样式就小了一半。
+// module.exports = {
+//   plugins: {
+//     'postcss-pxtorem': {
+//       rootValue ({ file }) {
+//         // 如果是 Vant 的样式就按照 37.5 处理转换
+//         // 如果是我们自己的样式就按照 75 处理转换
+//         return file.indexOf('vant') !== -1 ? 37.5 : 75
+//       },
+//       propList: ['*']
+//     }
+//   }
+// }
